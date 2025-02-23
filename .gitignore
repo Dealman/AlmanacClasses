@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/AlmanacClasses/FileContentIndex
+/.vs/AlmanacClasses/v17
+/.vs
+/.gitignore
+/AlmanacClasses/.gitignore
+/AlmanacClasses/assets/classesbundle
+/.gitignore

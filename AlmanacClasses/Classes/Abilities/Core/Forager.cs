@@ -1,8 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using BepInEx.Logging;
 using HarmonyLib;
+using UnityEngine;
 
 namespace AlmanacClasses.Classes.Abilities.Core;
 
+// TODO: Description for Forager has been updated for clarity, Korean + Brazilian translation?
 public static class Forager
 {
     [HarmonyPatch(typeof(Pickable), nameof(Pickable.RPC_Pick))]
@@ -21,7 +25,10 @@ public static class Forager
             var bonusChance = talent.GetForageModifier(talent.GetLevel()) - 1.0f;
             if (ClassUtilities.RandomBoolWithWeight(bonusChance))
             {
-                __instance.Drop(__instance.m_itemPrefab, 1, __instance.m_amount);
+                int scaledDropNum = (__instance.m_dontScale ? __instance.m_amount : Mathf.Max(__instance.m_minAmountScaled, Game.instance.ScaleDrops(__instance.m_itemPrefab, __instance.m_amount)));
+                __instance.Drop(__instance.m_itemPrefab, 1, scaledDropNum);
+                AlmanacClassesPlugin.AlmanacClassesLogger.LogDebug($"[Forager]: Successful roll, extra dropped: {scaledDropNum}");
+                DamageText.instance.ShowText(DamageText.TextType.Bonus, __instance.transform.position + Vector3.up * __instance.m_spawnOffset, $"Forager Bonus: +{scaledDropNum}", player: true);
             }
         }
     }
