@@ -101,12 +101,14 @@ public static class ExperienceManager
     {
         Dictionary<string, ExperienceData> output = new()
         {
+            // Meadows
             ["Greyling"] = CreateData(1, 1, 15),
             ["Boar"] = CreateData(1, 1, 15),
             ["Deer"] = CreateData(1, 1, 15),
             ["Neck"] = CreateData(1, 1, 15),
             ["Eikthyr"] = CreateData(10, 1, 15),
             ["Greydwarf"] = CreateData(2, 5, 25),
+            // Black Forest
             ["Greydwarf_Elite"] = CreateData(5, 5, 25),
             ["Greydwarf_Shaman"] = CreateData(5, 5, 25),
             ["Ghost"] = CreateData(3, 5, 25),
@@ -115,6 +117,7 @@ public static class ExperienceManager
             ["Skeleton_Hildir"] = CreateData(20, 5, 35),
             ["gd_king"] = CreateData(20, 5, 25),
             ["TentaRoot"] = CreateData(0, 100, 100),
+            // Swamp
             ["Surtling"] = CreateData(3, 10, 30),
             ["Leech"] = CreateData(5, 10, 30),
             ["Skeleton_Poison"] = CreateData(5, 10, 30),
@@ -126,7 +129,9 @@ public static class ExperienceManager
             ["Wraith"] = CreateData(10, 10, 30),
             ["Abomination"] = CreateData(15, 10, 30),
             ["Bonemass"] = CreateData(30, 10, 30),
+            // Ocean
             ["Serpent"] = CreateData(30, 10, 50),
+            // Mountain
             ["Bat"] = CreateData(8, 15, 40),
             ["Wolf"] = CreateData(10, 15, 40),
             ["Hatchling"] = CreateData(10, 15, 40),
@@ -136,6 +141,7 @@ public static class ExperienceManager
             ["StoneGolem"] = CreateData(30, 15, 40),
             ["Dragon"] = CreateData(30, 15, 40),
             ["Fenring_Cultist_Hildr"] = CreateData(30, 15, 60),
+            // Plains
             ["Deathsquito"] = CreateData(20, 20, 60),
             ["Goblin"] = CreateData(20, 20, 60),
             ["GoblinShaman"] = CreateData(25, 20, 60),
@@ -146,6 +152,7 @@ public static class ExperienceManager
             ["GoblinShaman_Hildir"] = CreateData(40, 20, 80),
             ["GoblinBrute_Hildir"] = CreateData(40, 20, 80),
             ["GoblinBruteBros"] = CreateData(40, 20, 80),
+            // Mistlands
             ["Hare"] = CreateData(25, 25, 80),
             ["Tick"] = CreateData(25, 25, 80),
             ["SeekerBrood"] = CreateData(25, 25, 80),
@@ -159,6 +166,7 @@ public static class ExperienceManager
             ["DvergerMageSupport"] = CreateData(35, 25, 80),
             ["Gjall"] = CreateData(40, 25, 80),
             ["SeekerQueen"] = CreateData(50, 25, 80),
+            // Ashlands
             ["Charred_Twitcher"] = CreateData(30, 30, 100),
             ["Charred_Archer"] = CreateData(35, 30, 100),
             ["Charred_Melee"] = CreateData(35, 30, 100),
@@ -168,7 +176,34 @@ public static class ExperienceManager
             ["FallenValkyrie"] = CreateData(40, 30, 100),
             ["Goblin_Gem"] = CreateData(40, 30, 100),
             ["Charred_Melee_Dyrnwyn"] = CreateData(45, 30, 100),
-            ["Fader"] = CreateData(65, 30, 100)
+            ["Fader"] = CreateData(65, 30, 100),
+            // Monstrum - Meadows
+            ["Fox_TW"] = CreateData(1, 1, 15),
+            ["BossAsmodeus_TW"] = CreateData(10, 1, 15),
+            // Monstrum - Black Forest
+            ["Razorback_TW"] = CreateData(2, 5, 25),
+            ["BlackBear_TW"] = CreateData(5, 5, 25),
+            ["GDAncientShaman_TW"] = CreateData(5, 5, 25),
+            // Monstrum - Swamp
+            ["RottingElk_TW"] = CreateData(5, 10, 30),
+            ["Crawler_TW"] = CreateData(10, 10, 30),
+            ["HelWraith_TW"] = CreateData(10, 10, 30),
+            // Monstrum - Ocean
+            ["Shark_TW"] = CreateData(30, 10, 50),
+            // Monstrum - Mountain
+            ["ObsidianGolem_TW"] = CreateData(30, 15, 40),
+            ["GrizzlyBear_TW"] = CreateData(15, 15, 40),
+            // Monstrum - Plains
+            ["Prowler_TW"] = CreateData(20, 20, 60),
+            // Wizardry
+            ["Sheep_TW"] = CreateData(1, 1, 15),
+            ["GreydwarfMage_TW"] = CreateData(5, 5, 25),
+            ["SkeletonMage_TW"] = CreateData(10, 10, 30),
+            ["FenringMage_TW"] = CreateData(15, 15, 40),
+            ["GoblinMage_TW"] = CreateData(20, 20, 60),
+            ["CorruptedDvergerMage_TW"] = CreateData(35, 25, 80),
+            ["SummonedSeeker_TW"] = CreateData(35, 25, 80)
+            // TODO: Add support for Therzie's Deep North creatures?
         };
         return output;
     }
